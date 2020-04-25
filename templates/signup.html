@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Messenger</h1>
+    <h2>Sign up</h2>
+    {% if error %}
+      <p class="alert alert-{{error}}">{{error}}</p>
+    {% endif %}
+      <form method="POST">
+        <div class="form-group">
+          <input type="text" name="new_log" placeholder="New username"/><br>
+        </div>
+        <div class="form-group">
+          <input type="password" name="new_pass" placeholder="New password"/><br>
+        </div>
+        <div>
+          <input type="password" name="confirm" placeholder="Confirm password"/><br>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="<button type="button" name="button">Sign up</button>
+        </div>
+      </form>
+    <div id="have_log_button" class="have_log">
+      <p>Have an account? <a href="/" role="button">Log in</a></p>
+    </div>
+{% endblock %}
