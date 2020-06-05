@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/groupcreate_style.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/hover-min.css') }}"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap" rel="stylesheet"/>
+    <title>Messenger (alpha) | Create group chat</title>
+  </head>
+  <body>
+    <div class="background">
+  </div>
+  <div class='content'>
+    <h3>Create group chat</h3>
+    <form class="list-group" method="POST">
+    {% if error %}
+      <p id="error" class="alert alert-{{error}}">{{error}}</p>
+    {% endif %}
+    <div id="comf">
+    <p>Enter a new chat name:</p>
+    <input id="type" type="text" name="groupname" placeholder="Type here..."/>
+  </div>
+    <h4>Invite users:</h4>
+      <div data-simplebar id="users">
+      {% for user in auth_base %}
+        <input type="checkbox" name="{{user}}" value="{{user}}"/>
+        <label class="hvr-grow" for="{{user}}">{{user}}</label><br>
+      {% endfor %}
+    </div>
+      <button id="create" type="submit" class="button hvr-grow" name="button" placeholder="Create">Create</button>
+      <a id="cancel" href="/chats" class="button hvr-grow" role="button">Cancel</a>
+    </form>
+  </div>
+  </body>
+</html>

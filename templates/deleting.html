@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/deleting_style.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/hover-min.css') }}"/>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap" rel="stylesheet"/>
+    <title>Messenger (alpha) | Deleting account</title>
+  </head>
+  <body>
+    <div class="background">
+  </div>
+  <div class='content'>
+    <h1>Are you sure you want to delete your account, {{login}}?</h1>
+    <a id="confirm" class="button hvr-grow" href="/delete/confirm" role="delete">Yes, delete my account</a>
+    <a id="no" class="button hvr-grow" href="/chats" role="button">Cancel</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chats_style.css') }}"/>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/simplebar.css') }}"/>
+    <script src="{{ url_for('static', filename='simplebar.min.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/hover-min_copy.css') }}"/>
+    <title>Messenger (alpha) | Chats</title>
+  </head>
+  <body>
+    <div class="background">
+  </div>
+    <div class="content">
+      <h1>Welcome, {{login}}!</h1>
+      <span id="settings" class="material-icons">settings</span>
+      <span id="opt" class="hvr-grow">Options</span>
+      <div id="users">
+        <h2>Chat</h2>
+        <ul data-simplebar id="list_users" class="list-group">
+          {% for user in auth_base %}
+          <li class="list-group-item hvr-grow"><p><a href="/chats/{{user}}">{{user}}</a></p></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div id="groups">
+        <h3>Group chat</h3>
+        <ul data-simplebar class="multichat-group">
+          {% for group in group_base %}
+          <li class="multichat-group-item hvr-grow"><p><a href="/chats/group/{{group}}">{{group}}</a></p></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div id="funcs">
+        <a href="/chats/groupcreate" class="hvr-bounce-in" id="new" role="button">Create groupchat</a>
+        <a href="/delete" class="hvr-bounce-in" id="del" role="button">Delete account</a>
+        <a href="/logout" class="hvr-bounce-in" id="exit" role="button">Log out</a>
+     </div>
+    </div>
+    <script src="{{ url_for('static', filename='chats_click.js') }}"></script>
+  </body>
+</html>
