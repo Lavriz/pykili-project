@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  text-align: center;
+  font-family: 'Exo', sans-serif;
+  color: black;
+}
+.background {
+  background-image: url("https://raw.githubusercontent.com/Lavriz/lavriz.github.io/gh-pages/chat_background.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  filter:blur(0.3px);
+}
+
+.cont_form_login{
+  position: absolute;
+	top: calc(50% - 100px);
+	left: calc(50% - 160px);
+	height: 350px;
+	width: 350px;
+	padding: 10px;
+	z-index: 2;
+  background-color: white;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
+  opacity: 0.8
+}
+
+.form-group button {
+  width: 120px;
+  height: 30px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 160px;
+  left: 125px;
+  background: #FF4500;
+  color: #fff;
+  font-size: 15px;
+  box-shadow: none;
+  display:inline-block;
+  border:0.1em solid;
+  margin:0 0.3em 0.3em 0;
+  border-radius:20px;
+  box-sizing: border-box;
+  text-decoration:none;
+  transition: all 0.2s;
+}
+.form-group button:hover{
+  opacity: 0.8;
+}
+.have_signup {
+  position: absolute;
+  bottom: 10px;
+  letter-spacing: 2px;
+  left: 95px;
+}
+.move {
+  font-size: 40px;
+  justify-content: center;
+  position: absolute;
+  top: 120px;
+  right: 22%;
+}
+
+.form-group > input {
+  text-align: left;
+  font-size: 15px;
+  height: 30px;
+  padding: 4px;
+  width: 200px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid black;
+  position: relative;
+  top: 60px;
+  left:5px;
+  width: 200px;
+  color: black;
+}
+::placeholder {
+  font-size: 15px;
+  color: grey;
+}
+#error {
+  position: absolute;
+  top:25px;
+  left:85px;
+}
+.move {
+  letter-spacing: 10px;
+  overflow: hidden;
+}
+.move .letter {
+  display: inline-block;
+}
