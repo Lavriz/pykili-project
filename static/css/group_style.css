@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  font-family: 'Exo', sans-serif;
+  color: black;
+}
+.background {
+  background-image: url("https://raw.githubusercontent.com/Lavriz/lavriz.github.io/gh-pages/chat_background.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  filter:blur(0.3px);
+}
+.content {
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  box-shadow: 0 0 10px;
+  text-align: center;
+}
+#group {
+  background: #FF5533;
+  color: white;
+}
+.history {
+  position: absolute;
+  top: 210px;
+  left: 263px;
+  transform: translate(-50%, -50%);
+  width: 470px;
+  height: 416px;
+  text-align: left;
+}
+.message {
+  position: absolute;
+  bottom: 7px;
+  left: 10px;
+  border-radius: 20px;
+  border: 0.2em solid black;
+  overflow: hidden;
+  padding: 8px;
+  width: 400px;
+  text-align: left;
+  font-size: 12px;
+  background: white;
+  display:flex;
+  flex-direction: row;
+}
+#send {
+  bottom: 1px;
+  right: 2px;
+  cursor: pointer;
+  background: #FF5533;
+  color: #fff;
+  font-size: 15px;
+  box-shadow: none;
+  display:inline-block;
+  border: 0.1em solid;
+  margin:0 0.3em 0.3em 0;
+  border-radius:20px;
+  box-sizing: border-box;
+  text-decoration:none;
+  transition: all 0.2s;
+  width: 80px;
+  height: 38px;
+  position:absolute;
+  font-size: 15px;
+  text-align: center;
+}
+.content button:hover{
+  opacity: 0.8;
+}
+#return {
+  position: absolute;
+  top: 5px;
+  left: 28px;
+  color: white;
+  text-align: center;
+}
+#arrow {
+  position: absolute;
+  right: 35px;
+  top: -1px;
+  color: white;
+}
+#return:hover {
+  cursor: pointer;
+  color: ;
+}
+.message:focus {
+  outline: none;
+}
+.simplebar-scrollbar::before {
+  background-color: black;
+}
+#delete {
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  color: white;
+  text-align: center;
+}
+#delete:hover {
+  cursor: pointer;
+}
+#bin {
+  position: absolute;
+  top: -1px;
+  right: 115px;
+  color: white;
+  text-align: center;
+}
