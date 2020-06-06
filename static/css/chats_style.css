@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  text-align: center;
+  font-family: 'Exo', sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+}
+.background {
+  background-image: url("https://raw.githubusercontent.com/Lavriz/lavriz.github.io/gh-pages/chat_background.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  filter:blur(0.3px);
+}
+.content {
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  box-shadow: 0 0 10px;
+}
+h1 {
+  background: #FF5533;
+  color: white;
+  text-align:left;
+  padding: 0px 15px;
+  font-size: 26px;
+}
+h2 {
+  position: absolute;
+  left: 95px;
+  top: 40px;;
+  font-size: 23px;
+}
+h3 {
+  position: absolute;
+  right: 55px;
+  top: 40px;
+  font-size: 23px;
+}
+.list-group {
+  position: absolute;
+  top: 70px;
+  left: 30px;
+  height: 360px;
+  font-size: 20px;
+  border-top: inset 2px black;
+  width: 180px;
+
+}
+.multichat-group {
+  position: absolute;
+  top: 70px;
+  height: 360px;
+  right: 30px;
+  font-size: 20px;
+  border-top: inset 2px black;
+  width: 180px;
+}
+#exit {
+  position: absolute;
+  bottom: 10px;
+  right: 85px;
+  background: #DCDCDC;
+  color: black;
+  width: 100px;
+  height: 45px;
+  font-size: 16px;
+  padding: 10px 0px;
+  box-shadow: 0 0 5px;
+}
+#del {
+  position: absolute;
+  bottom: 10px;
+  left: 210px;
+  background: #DCDCDC;
+  color: black;
+  width: 100px;
+  height: 45px;
+  font-size: 16px;
+  padding: 2px 0px;
+  box-shadow: 0 0 5px;
+}
+.simplebar-scrollbar::before {
+  background-color: black;
+}
+#settings {
+  position:absolute;
+  bottom: 15px;
+  left: 185px;
+  font-size: 25px;
+  color: black;
+}
+#opt {
+  position: absolute;
+  bottom: 10px;
+  left: 210px;
+  font-size: 26px;
+  cursor: pointer;
+}
+#new {
+  position: absolute;
+  bottom: 10px;
+  left: 105px;
+  background: #DCDCDC;
+  color: black;
+  width: 100px;
+  height: 45px;
+  font-size: 16px;
+  padding: 3px 0px;
+  box-shadow: 0 0 5px;
+}
